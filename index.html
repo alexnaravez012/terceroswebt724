@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./data/style.css">
+    <link rel="stylesheet" href="./fontawesome-web/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.9/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,400&display=swap" rel="stylesheet">
+    <title>Tienda 724</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="uk-flex uk-flex-between navbar-third">
+        <div class="uk-flex uk-flex-middle">
+            <div uk-toggle="target: .menu-vertical-third; cls: show" class="padding-horizontal-20">
+                <img class="icon-menu-third" src="./data/menu.png" alt="">
+            </div>
+            <div>
+                <img src="./data/tienda724.png" class="logo-size-third" alt="">
+            </div>
+            <div class="uk-inline">
+                <div class="cursor-pointer uk-flex uk-flex-middle" style="margin-left: 60px;">
+                    <img class="logo-store-size-third" src="./data/logo2.png " alt=" ">
+                    <i class="fas fa-caret-down font-size-17"></i>
+                </div>
+                <div uk-drop="mode: click">
+                    <div style="position: relative;">
+                        <div class="drop-store-third">
+                            <!-- <ul class="uk-list " style="padding-bottom: 20px;">
+                                <h6 class="uk-margin-remove font-size-10" style="width: 65px; padding-bottom: 10px;">Documento del proveedor</h6>
+                                <div class="hr-tab"></div>
+                                <button class="button-search-supplier-third uk-text-bold">Buscar proveedor</button>
+                                <h6 class=" uk-margin-remove font-size-10">Seleccione tienda proveedora</h6>
+                                <div class="select-supplier-third">
+                                    <select>
+                                        <option>--</option>
+                                        <option>opción 1</option>
+                                        <option>opción 2</option>
+                                        <option>opción 3</option>
+                                        <option>opción 4</option>
+                                    </select>
+                                    <div class="select_arrow-supplier-third">
+                                    </div>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Proveedor:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">--</h6>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Documento:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">--000</h6>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Teléfono:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">000</h6>
+                                </div>
+                                <div class="padding-vertical-10">
+                                    <h6 class="uk-margin-remove uk-text-bold font-size-12">Dirección:</h6>
+                                    <h6 class="uk-margin-remove font-size-12">N/A</h6>
+                                </div>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-inline cursor-pointer padding-horizontal-30 uk-flex uk-flex-middle">
+            <button class="button-data-user-third uk-flex uk-flex-middle">
+                <img class="logo-user-size-third" src="./data/icono-de-usuario.png" alt=" ">
+                <h4 class="uk-text-bold uk-margin-remove color-red" style="padding-right: 5px;">Mireya Mopan</h4>
+                <i class="fas fa-caret-down "></i>
+            </button>
+            <div uk-drop="mode: click">
+                <div class="uk-card uk-card-body uk-card-default uk-box-shadow-large drop-data-user-third">
+                    <div class="padding-vertical-10">
+                        <h5 class="uk-text-bold uk-margin-remove">Roles activados:</h5>
+                        <h5 class="uk-margin-remove ">Propietario de la empresa</h5>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="padding-vertical-10">
+                        <h5 class="uk-text-bold uk-margin-remove ">Su documento es:</h5>
+                        <h5 class="uk-margin-remove ">CC: 55555555555001</h5>
+                    </div>
+                    <div class="hr-tab"></div>
+                    <div class="padding-vertical-10">
+                        <h5 class="uk-text-bold uk-margin-remove">Id de usuario:</h5>
+                        <h5 class="uk-margin-remove ">94518</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Menu vertical ERP-->
+    <div style="position: relative;">
+        <div class="menu-vertical-third">
+            <ul class="uk-list" style="padding-bottom: 20px;">
+                <div class="uk-flex uk-flex-between">
+                    <div style="margin-left: 33px;">
+                        <h4 class="uk-margin-remove color-red uk-text-bold">ERP</h4>
+                        <h4 class="uk-margin-remove color-red uk-text-bold">Dashboard</h4>
+                    </div>
+                    <div style="padding-right: 5px;">
+                        <div uk-toggle="target: .menu-vertical-third; cls: show" style="margin-right: 10px;">
+                            <i class=" fas fa-times font-size-17 color-red cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-third">
+                        <img class="img-menu-vertical-size-third" src="./data/Iconografía/Inventario.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Inventario</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-third">
+                        <img class="img-menu-vertical-size-third" src="./data/Iconografía/Reportes.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Reportes</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-third">
+                        <img class="img-menu-vertical-size-third" src="./data/Iconografía/Terceros.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Tercero</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-third">
+                        <img class="img-menu-vertical-size-third" src="./data/Iconografía/Contabilidad.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Contabilidad</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-third">
+                        <img class="img-menu-vertical-size-third" src="./data/Iconografía/Pedidos.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Pedidos</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-third">
+                        <img class="img-menu-vertical-size-third" src="./data/Iconografía/Crear-producto.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Crear producto</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-third">
+                        <img class="img-menu-vertical-size-third" src="./data/Iconografía/Opciones-de-caja.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Opciones de caja</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-third">
+                        <img class="img-menu-vertical-size-third" src="./data/Iconografía/Domicilios.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Domicilios</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-third">
+                        <img class="img-menu-vertical-size-third" src="./data/Iconografía/administracion-de-pedidos.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12" style="width: 100px;">Administracion de pedidos</h4>
+                    </div>
+                    <div class="uk-flex uk-flex-middle cursor-pointer items-menu-vertical-third">
+                        <img class="img-menu-vertical-size-third" src="./data/Iconografía/Domicilios.png" alt="">
+                        <h4 class="uk-margin-remove uk-text-bold font-size-12">Mesas</h4>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <!-- Buscar -->
+    <div style="display: inline;">
+        <!-- Contenido -->
+        <div class="main-container-third">
+            <div class="uk-flex uk-flex-middle navbar-search-products-third">
+                <div class="uk-flex uk-flex-center uk-flex-middle" style="padding-left: 40px; padding-top: 18px; height: 45px; border-bottom: 18px solid white;">
+                    <h4 class="uk-margin-remove color-red-3 uk-text-bold">Terceros</h4>
+                </div>
+                <div class="uk-flex uk-flex-middle uk-flex-center button-categories-third">
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer uk-text-center" style="padding-top: 21px;">Buscar</h6>
+                </div>
+                <div style="margin-left: 45px;">
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer">Persona</h6>
+                </div>
+                <div style="margin-left: 55px;">
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer">Empresa</h6>
+                </div>
+            </div>
+            <div>
+                <div class="uk-flex uk-flex-middle navbar-search-products-re-third" style="margin-left: 42px; margin-bottom: 6px;">
+                    <div style="margin-top: 19px;">
+                        <h6 class="uk-margin-remove font-size-11" style="line-height: 10%;">Documento tercero</h6>
+                        <input class="input-date-third font-size-12" type="text" placeholder="Gonzalo">
+                    </div>
+                    <div style="margin-left: 115px;">
+                        <button class="button-search-actualice-third" style="width: 90px;">Buscar</button>
+                        <button class="button-search-actualice-third">Actualizar Datos</button>
+                    </div>
+                </div>
+                <div class="navbar-product-select-third">
+                </div>
+                <div class="uk-flex uk-flex-middle" style="margin-left: 42px;">
+                    <div class="width-110">
+                        <h6 class="uk-margin-remove font-size-12 color-red-two uk-text-bold">Tercero:</h6>
+                        <h6 class="uk-margin-remove font-size-11">Gonzalo Arias</h6>
+                    </div>
+                    <div class="width-110" style="margin-left: 20px;">
+                        <h6 class="uk-margin-remove font-size-12 color-red-two uk-text-bold">Documento:</h6>
+                        <h6 class="uk-margin-remove font-size-11">CC-10232306</h6>
+                    </div>
+                    <div style="margin-top: 20px; margin-left: 20px;">
+                        <h6 class="uk-margin-remove font-size-11" style="line-height: 5%;">Dirección</h6>
+                        <input class="input-date-third font-size-11" type="text" placeholder="CL 13 con CR 80 San Andr" style="width: 200px;">
+                    </div>
+                    <div style="margin-top: 20px; margin-left: 30px;">
+                        <h6 class="uk-margin-remove font-size-11" style="line-height: 5%;">Telefono</h6>
+                        <input class="input-date-third font-size-11" type="text" placeholder="3128541582">
+                    </div>
+                    <div style="margin-top: 20px; margin-left: 30px;">
+                        <h6 class="uk-margin-remove font-size-11" style="line-height: 5%;">Email</h6>
+                        <input class="input-date-third font-size-11" type="text" placeholder="jkbotero@hotmail.com" style="width: 180px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Persona -->
+    <div style="display: none;">
+        <div class="main-container-third">
+            <div class="uk-flex uk-flex-middle navbar-search-products-third">
+                <div class="uk-flex uk-flex-center uk-flex-middle" style="padding-left: 40px; ">
+                    <h4 class="uk-margin-remove color-red-3 uk-text-bold">Terceros</h4>
+                </div>
+                <div>
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer uk-text-center" style="padding-left: 70px;">Buscar</h6>
+                </div>
+                <div class="button-trademark-third uk-flex uk-flex-middle uk-flex-center" style="margin-left: 45px; width: 130px;">
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer" style="padding-top: 21px;">Persona</h6>
+                </div>
+                <div style="margin-left: 40px;">
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer">Empresa</h6>
+                </div>
+            </div>
+            <div style="margin-left: 40px; margin-top: 25px;">
+                <h5 class="uk-margin-remove uk-text-bold color-red-two">Registrar una nueva persona</h5>
+                <h6 class="uk-margin-remove font-size-11">Datos para registrar a la nueva persona natural:</h6>
+                <div class="uk-flex-uk-flex-middle" style="margin-top: 25px;">
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="Primer nombre">
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="Segundo nombre">
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="Primer apellido">
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="Segundo apellido">
+                </div>
+                <div class="uk-flex uk-flex-middle">
+                    <div>
+                        <div class="select-create-product-third" style="width: 183px; margin-bottom: 17px;">
+                            <select>
+                                    <option>Tipo de documento</option>
+                                    <option>opción 1</option>
+                                    <option>opción 2</option>
+                                    <option>opción 3</option>
+                                    <option>opción 4</option>
+                                </select>
+                            <div class="select_arrow-create-product-third" style="border-color: black transparent transparent transparent;">
+                            </div>
+                        </div>
+                    </div>
+                    <input class="input-register-user-third font-size-12" style="margin-left: 30px;" type="text" placeholder="Numero de documento">
+                </div>
+                <div class="uk-flex uk-flex-middle">
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="Dirección">
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="Télefono" style="margin-left: 5px;">
+                    <input class="input-register-user-third font-size-12" type="text " placeholder="E-mail" style="margin-left: 5px;">
+                    <div style="margin-left: 80px; margin-bottom: 15px;">
+                        <h6 class="uk-margin-remove font-size-11 uk-text-center ">Pais</h6>
+                        <h6 class="uk-margin-remove font-size-11 uk-text-bold ">COLOMBIA</h6>
+                    </div>
+                </div>
+                <div class="uk-flex uk-flex-middle" style="margin-top: 45px;">
+                    <div>
+                        <h6 class="uk-margin-remove font-size-11 ">Ciudad</h6>
+                        <div class="select-create-product-third" style="width: 183px; ">
+                            <select>
+                                    <option>BOGOTÁ DC..</option>
+                                    <option>opción 1</option>
+                                    <option>opción 2</option>
+                                    <option>opción 3</option>
+                                    <option>opción 4</option>
+                                </select>
+                            <div class="select_arrow-create-product-third" style="border-color: black transparent transparent transparent;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: 30px; ">
+                        <h6 class="uk-margin-remove font-size-11 ">Seleccione Sexo</h6>
+                        <div class="select-create-product-third " style="width: 183px; ">
+                            <select>
+                                    <option>Femenino</option>
+                                    <option>opción 1</option>
+                                    <option>opción 2</option>
+                                    <option>opción 3</option>
+                                    <option>opción 4</option>
+                                </select>
+                            <div class="select_arrow-create-product-third" style="border-color: black transparent transparent transparent;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 15px; margin-left: 30px; margin-bottom: 2px;">
+                        <h6 class="uk-margin-remove font-size-11 ">Fecha de nacimiento</h6>
+                        <input class="input-register-user-third font-size-12" type="date" style="width: 183px;">
+                    </div>
+                    <div style="margin-bottom: 7px; margin-left: 85px; cursor: pointer;">
+                        <i class="fas fa-save color-red-two font-size-30" style="margin-left: 10px;"></i>
+                        <h6 class="uk-margin-remove color-red-two uk-text-bold font-size-11">GUARDAR</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Productos-->
+    <div style="display: none;">
+        <div class="main-container-third ">
+            <div class="uk-flex uk-flex-middle navbar-search-products-third ">
+                <div class="uk-flex uk-flex-center uk-flex-middle " style="padding-left: 40px; ">
+                    <h4 class="uk-margin-remove color-red-3 uk-text-bold ">Terceros</h4>
+                </div>
+                <div>
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer uk-text-center " style="padding-left: 70px; ">Buscar</h6>
+                </div>
+                <div style="margin-left: 50px; ">
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer ">Persona</h6>
+                </div>
+                <div class="button-trademark-third uk-flex uk-flex-middle uk-flex-center " style="margin-left: 40px; width: 130px; ">
+                    <h6 class="uk-margin-remove uk-text-bold cursor-pointer " style="padding-top: 21px; ">Empresa</h6>
+                </div>
+            </div>
+            <div style="margin-left: 40px; margin-top: 25px;">
+                <h5 class="uk-margin-remove uk-text-bold color-red-two">Registrar una nueva empresa</h5>
+                <h6 class="uk-margin-remove font-size-11">Información básica del nuevo tercero:</h6>
+                <div class="uk-flex-uk-flex-middle" style="margin-top: 25px;">
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="Nombre">
+                    <div class="select-create-product-third" style="width: 183px; margin-bottom: 17px;">
+                        <select>
+                                <option>Tipo de documento</option>
+                                <option>opción 1</option>
+                                <option>opción 2</option>
+                                <option>opción 3</option>
+                                <option>opción 4</option>
+                            </select>
+                        <div class="select_arrow-create-product-third">
+                        </div>
+                    </div>
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="Número de Documento" style="margin-left: 30px;">
+                </div>
+                <div class="uk-flex uk-flex-middle">
+                    <div>
+                        <h6 class="uk-margin-remove font-size-11" style="line-height: 5px; padding-top: 5px;">Pais</h6>
+                        <div class="select-register-enterprise-third">
+                            <select>
+                                    <option>COLOMBIA</option>
+                                    <option>opción 1</option>
+                                    <option>opción 2</option>
+                                    <option>opción 3</option>
+                                    <option>opción 4</option>
+                                </select>
+                            <div class="select_arrow-register-enterprise-third">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: 30px;">
+                        <h6 class="uk-margin-remove font-size-11" style="line-height: 5px; padding-top: 5px;">Ciudad</h6>
+                        <div class="select-register-enterprise-third">
+                            <select>
+                                    <option>BOGOTÁ D.C.</option>
+                                    <option>opción 1</option>
+                                    <option>opción 2</option>
+                                    <option>opción 3</option>
+                                    <option>opción 4</option>
+                                </select>
+                            <div class="select_arrow-register-enterprise-third">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: 32px;">
+                        <div class="select-create-product-third" style="width: 183px; margin-top: 5px;">
+                            <select>
+                                    <option>Dirección</option>
+                                    <option>opción 1</option>
+                                    <option>opción 2</option>
+                                    <option>opción 3</option>
+                                    <option>opción 4</option>
+                                </select>
+                            <div class="select_arrow-create-product-third">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-flex uk-flex-middle" style="margin-top: 8px;">
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="Télefono">
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="E-mail" style="margin-left: 5px;">
+                    <input class="input-register-user-third font-size-12" type="text" placeholder="Página web" style="margin-left: 8px;">
+                    <div style="padding-bottom: 20px; margin-left: 50px; cursor: pointer;">
+                        <i class="fas fa-save color-red-two font-size-30" style="margin-left: 10px;"></i>
+                        <h6 class="uk-margin-remove color-red-two uk-text-bold font-size-11" style="padding-bottom: 15px;">GUARDAR</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
